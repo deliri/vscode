@@ -1,0 +1,56 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // Telemetry settings 
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    
+    // Editor settings
+    "editor.formatOnType": true,
+    "editor.mouseWheelZoom": true,
+    "editor.rulers": [80,120],
+    "editor.trimAutoWhitespace": true,
+    "editor.fontSize": 21,
+    "editor.fontFamily": "hack",
+   
+    // exclude settings
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/dist/public": true,
+        "**/tmp": true,
+        "**/tags": true,
+        "**/public/dist": true,
+        "**/.vscode": true
+    },
+    "files.trimTrailingWhitespace": false,
+
+    "spellchecker.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+
+    "spellchecker.ignoreFileExtensions": [
+        ".go"
+    ],
+
+    
+    // golang settings
+    "go.buildOnSave": false,
+    "go.lintOnSave": false,
+    "go.vetOnSave": true,
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintTool": "golint",
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.formatOnSave": true, 
+    "go.formatTool": "goreturns",
+    "go.formatFlags": [],
+    "go.goroot": "/usr/local/go",
+    "go.gopath": "/Users/d/go",
+    "go.inferGopath": false,
+    "go.gocodeAutoBuild": false
+}
