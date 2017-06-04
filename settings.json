@@ -1,16 +1,18 @@
-// Place your settings in this file to overwrite the default settings
 {
     // Telemetry settings 
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "editor.minimap.enabled": true,
+    "editor.renderIndentGuides": true,
     
     // Editor settings
     "editor.formatOnType": true,
     "editor.mouseWheelZoom": true,
     "editor.rulers": [80,120],
     "editor.trimAutoWhitespace": true,
-    "editor.fontSize": 21,
-    "editor.fontFamily": "hack",
+    "editor.fontSize": 22,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "fira code",
    
     // exclude settings
     "files.exclude": {
@@ -23,17 +25,17 @@
         "**/.vscode": true
     },
     "files.trimTrailingWhitespace": false,
-
+ 
     "spellchecker.documentTypes": [
         "markdown",
         "latex",
         "plaintext"
     ],
-
+ 
     "spellchecker.ignoreFileExtensions": [
         ".go"
     ],
-
+ 
     
     // golang settings
     "go.buildOnSave": false,
@@ -45,12 +47,16 @@
     "go.lintFlags": [],
     "go.vetFlags": [],
     "go.coverOnSave": false,
-    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.formatOnSave": true, 
     "go.formatTool": "goreturns",
     "go.formatFlags": [],
     "go.goroot": "/usr/local/go",
     "go.gopath": "/Users/d/go",
     "go.inferGopath": false,
-    "go.gocodeAutoBuild": false
+    "go.gocodeAutoBuild": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    "workbench.iconTheme": "material-icon-theme"
 }
+ 
