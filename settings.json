@@ -3,16 +3,17 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "editor.minimap.enabled": true,
-    "editor.renderIndentGuides": true,
+    "editor.renderIndentGuides": false,
     
     // Editor settings
     "editor.formatOnType": true,
-    "editor.mouseWheelZoom": true,
+    "editor.mouseWheelZoom": false,
     "editor.rulers": [80,120],
     "editor.trimAutoWhitespace": true,
-    "editor.fontSize": 22,
+    "editor.fontSize": 24,
     "editor.fontLigatures": true,
-    "editor.fontFamily": "fira code",
+    "editor.fontFamily": "Operator Mono",
+    
    
     // exclude settings
     "files.exclude": {
@@ -48,7 +49,7 @@
     "go.vetFlags": [],
     "go.coverOnSave": false,
     "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.formatOnSave": true, 
+    "go.editor.formatOnSave": true, 
     "go.formatTool": "goreturns",
     "go.formatFlags": [],
     "go.goroot": "/usr/local/go",
@@ -56,7 +57,9 @@
     "go.inferGopath": false,
     "go.gocodeAutoBuild": false,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Sublime Material Theme - Dark",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
+    "git.confirmSync": false,
+    "workbench.colorTheme": "Snazzy Operator",
+    "explorer.confirmDelete": false
 }
- 
