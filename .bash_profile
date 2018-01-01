@@ -5,6 +5,7 @@ export GOPATH=$HOME/go;
 export PATH=$PATH:$GOPATH/bin;
 export PATH=$HOME/go_appengine:$PATH;
 export PATH=$HOME/google-cloud-skd/bin:$PATH;
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH;
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
