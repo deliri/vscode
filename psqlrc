@@ -9,4 +9,4 @@
 \pset unicode_header_linestyle double
 set intervalstyle to 'postgres_verbose';
 \setenv LESS '-iMFXSx4R'
-\setenv EDITOR '/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw'
+\setenv EDITOR '/Applications/Emacs.app/Contents/MacOS/bin/code -nw'
