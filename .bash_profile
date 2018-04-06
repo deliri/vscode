@@ -47,6 +47,8 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor';
 alias cgd="cd ~/go/src/github.com/deliri";
 alias buf="buffalo ";
 alias gg="go get -u -v ";
+alias gs="goapp serve";
+alias gd="goapp deploy";
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
