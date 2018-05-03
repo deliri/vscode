@@ -9,10 +9,18 @@
 	"editor.formatOnType": true,
 	"editor.mouseWheelZoom": false,
 	"editor.rulers": [80, 120],
-	"editor.trimAutoWhitespace": true,
-	"editor.fontSize": 26,
+	"editor.fontSize": 24,
+	"editor.letterSpacing": 0.5,
+	"files.trimTrailingWhitespace": true,
+	"editor.fontWeight": "400",
+	"prettier.eslintIntegration": true,
+	// this isn't really underline-thin but we hack it to be a thicker cursor
+	"editor.cursorStyle": "underline-thin",
+	"editor.cursorBlinking": "blinking",
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "Fira code",
+	"vscode_custom_css.imports": ["file:///Users/d/Documents/vsCodeStyles/styles.css"],
+	"editor.renderWhitespace": "all",
 
 
 	// exclude settings
