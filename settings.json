@@ -3,14 +3,14 @@
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
 	"editor.minimap.enabled": true,
-	"editor.renderIndentGuides": false,
+	"editor.renderIndentGuides": true,
 
 	// Editor settings
 	"editor.formatOnType": true,
 	"editor.mouseWheelZoom": false,
 	"editor.rulers": [80, 120],
 	"editor.trimAutoWhitespace": true,
-	"editor.fontSize": 24,
+	"editor.fontSize": 26,
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "Operator Mono",
 
