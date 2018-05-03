@@ -12,7 +12,7 @@
 	"editor.trimAutoWhitespace": true,
 	"editor.fontSize": 26,
 	"editor.fontLigatures": true,
-	"editor.fontFamily": "Operator Mono",
+	"editor.fontFamily": "Fira code",
 
 
 	// exclude settings
