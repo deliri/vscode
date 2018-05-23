@@ -31,6 +31,9 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;
 
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
+
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
     source "$(brew --prefix)/share/bash-completion/bash_completion";
