@@ -42,8 +42,7 @@
 	// this isn't really underline-thin but we hack it to be a thicker cursor
 	"editor.cursorStyle": "line-thin",
 	"editor.cursorBlinking": "blink",
-	"editor.fontLigatures": true,
-	"editor.fontFamily": "Operator Mono",
+	"editor.fontFamily": "Fira Code",
 	"vscode_custom_css.imports": [
 		"file:///Users/d/Documents/vsCodeStyles/styles.css"
 	],
@@ -80,7 +79,6 @@
 	"git.confirmSync": false,
 	"workbench.colorTheme": "Cobalt2",
 	"explorer.confirmDelete": false,
-	"workbench.iconTheme": "vscode-icons",
 	//"removeComments": true,
 	"minify.minifyExistingOnSave": false,
 	"minify.js": {
@@ -189,5 +187,6 @@
 		"sortClassName": false,
 		"useShortDoctype": true
 	},
-	"explorer.confirmDragAndDrop": false
+	"explorer.confirmDragAndDrop": false,
+	"editor.fontLigatures": true
 }
