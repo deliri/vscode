@@ -8,6 +8,11 @@ export PATH=$PATH:$GOPATH/bin;
 export PATH=$HOME/go_appengine:$PATH;
 export PATH=$HOME/google-cloud-skd/bin:$PATH;
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH;
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/d/google-cloud-sdk/path.zsh.inc
+
+# The next line enables zsh completion for gcloud.
+source /Users/d/google-cloud-sdk/completion.zsh.inc
 
 # Load main files.
 # echo "Load start\t" $(gdate "+%s-%N")
