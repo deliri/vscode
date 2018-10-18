@@ -1,25 +1,108 @@
-#!/usr/bin/env zsh
+# install
+# brew install zsh
+# curl -sL git.io/antibody | sh -s
+# chsh -s $(which zsh) to switch to zshell
+# antibody bundle zdharma/fast-syntax-highlighting
+# antibody bundle zsh-users/zsh-autosuggestions
+# antibody bundle zsh-users/zsh-history-substring-search
+# antibody bundle zsh-users/zsh-completions
+# antibody bundle marzocchi/zsh-notify
+# brew install terminal-notifier
+# antibody bundle buonomo/yarn-completion
 
+
+#!/usr/bin/env zsh
+export ZSH=$HOME/.oh-my-zsh;
 curr="$pm/dotfiles"
 export EDITOR="code -w"
 export PATH=$PATH:$HOME/go/bin;
 export GOPATH=$HOME/go;
 export PATH=$PATH:$GOPATH/bin;
-export PATH=$HOME/go_appengine:$PATH;
+# export PATH=$HOME/go_appengine:$PATH;
 export PATH=$HOME/google-cloud-skd/bin:$PATH;
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH;
 # The next line updates PATH for the Google Cloud SDK.
-source /Users/d/google-cloud-sdk/path.zsh.inc
+source /Users/d/google-cloud-sdk/path.zsh.inc;
 
 # The next line enables zsh completion for gcloud.
-source /Users/d/google-cloud-sdk/completion.zsh.inc
+source /Users/d/google-cloud-sdk/completion.zsh.inc;
+export PATH=$PATH:$HOME/google-cloud-sdk/platform/google_appengine;
 
-# Load main files.
-# echo "Load start\t" $(gdate "+%s-%N")
-source "$curr/terminal/startup.sh"
-# echo "$curr/terminal/startup.sh"
-source "$curr/terminal/completion.sh"
-source "$curr/terminal/highlight.sh"
+# Enable autocompletions
+autoload -Uz compinit
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+zmodload -i zsh/complist
+# Save history so we get auto suggestions
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+# Options
+setopt auto_cd # cd by typing directory name if it's not a command
+setopt auto_list # automatically list choices on ambiguous completion
+setopt auto_menu # automatically use menu completion
+setopt always_to_end # move cursor to end if word had one match
+setopt hist_ignore_all_dups # remove older duplicate entries from history
+setopt hist_reduce_blanks # remove superfluous blanks from history items
+setopt inc_append_history # save history entries as soon as they are entered
+setopt share_history # share history between different instances
+setopt correct_all # autocorrect commands
+setopt interactive_comments # allow comments in interactive shells
+# Improve autocompletion style
+zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' group-name '' # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
+# Load antibody plugin manager
+source <(antibody init)
+# Plugins
+antibody bundle zdharma/fast-syntax-highlighting
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-history-substring-search
+antibody bundle zsh-users/zsh-completions
+antibody bundle marzocchi/zsh-notify
+antibody bundle buonomo/yarn-completion
+# Keybindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[[3~' delete-char
+bindkey '^[3;5~' delete-char
+# Theme
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+# Simplify prompt if we're using Hyper
+if [[ "$TERM_PROGRAM" == "Hyper" ]]; then
+  SPACESHIP_PROMPT_SEPARATE_LINE=false
+  SPACESHIP_DIR_SHOW=false
+  SPACESHIP_GIT_BRANCH_SHOW=false
+fi
+antibody bundle denysdovhan/spaceship-prompt
+# Open new tabs in same directory
+if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+  function chpwd {
+    printf '\e]7;%s\a' "file://$HOSTNAME${PWD// /%20}"
+  }
+  chpwd
+fi
+
+#!/usr/bin/env zsh
+
 # echo "Load end\t" $(gdate "+%s-%N")
 
 autoload -U colors && colors
@@ -520,3 +603,4 @@ alias gs="goapp serve"
 alias gd="goapp deploy"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias cdg="cd go/src/github.com/deliri"
+
