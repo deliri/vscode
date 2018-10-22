@@ -597,10 +597,9 @@ alias gops='cd $GOPATH/src'
 alias gor='go run'
 alias got='go test'
 alias gov='go vet'
-alias gg='go get'
 alias gg="go get -u -v "
-alias gs="goapp serve"
-alias gd="goapp deploy"
+alias gcsc="gcloud config set project"
+alias gcad="gcloud app deploy"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias cdg="cd go/src/github.com/deliri"
 
