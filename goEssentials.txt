@@ -1,0 +1,23 @@
+go get -u -v golang.org/x/tools/cmd/goimports
+go get -u -v golang.org/x/tools/cmd/present
+go get -u -v github.com/FiloSottile/gvt
+go get -u -v github.com/davecheney/httpstat
+go get -u -v honnef.co/go/tools/cmd/megacheck
+go get -u -v github.com/alecthomas/gometalinter
+
+gometalinter --install
+
+go get -u -v github.com/rakyll/hey
+go get -u -v github.com/markbates/refresh
+
+go get -u -v github.com/mdempsky/gocode
+go get -u -v github.com/ramya-rao-a/go-outline
+go get -u -v github.com/acroca/go-symbols
+go get -u -v github.com/uudashr/gopkgs
+go get -u -v golang.org/x/tools/cmd/guru
+go get -u -v golang.org/x/tools/cmd/gorename
+go get -u -v github.com/sqs/goreturns
+go get -u -v github.com/rogpeppe/godef
+go get -u -v golang.org/x/tools/cmd/godoc
+go get -u -v github.com/golang/lint/golint
+go get -u -v github.com/derekparker/delve/cmd/dlv

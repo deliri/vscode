@@ -603,15 +603,6 @@ alias gcad="gcloud app deploy"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias cdg="cd go/src/github.com/deliri"
 
-#!/bin/zsh
-# In The Name Of God
-# ========================================
-# [] File Name : buffalo.plugin.zsh
-#
-# [] Creation Date : 08-06-2018
-#
-# [] Created By : Parham Alvani <parham.alvani@gmail.com>
-# =======================================
 
 _buffalo() {
 	local line
