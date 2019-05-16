@@ -6,10 +6,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 22,
+    fontSize: 24,
 
     // font family with optional fallbacks
-    fontFamily: '"Operator Mono", "Fira code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Operator Mono Lig", "Fira code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'bold',
@@ -117,9 +117,11 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-  "hyper-tabs-enhanced",
+    "hyper-tabs-enhanced",
     "hyper-clean",
-    "hyperterm-material-palenight",],
+    "hyperterm-material-palenight",
+    "hyper-material-theme"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
