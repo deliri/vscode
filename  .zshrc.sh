@@ -13,6 +13,7 @@
 
 #!/usr/bin/env zsh
 export ZSH=$HOME/.oh-my-zsh;
+ZSH_THEME="powerlevel9k/powerlevel9k";
 curr="$pm/dotfiles"
 export EDITOR="code -w"
 export PATH=$PATH:$HOME/go/bin;
@@ -23,7 +24,6 @@ export PATH=$HOME/google-cloud-skd/bin:$PATH;
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH;
 # The next line updates PATH for the Google Cloud SDK.
 source /Users/d/google-cloud-sdk/path.zsh.inc;
-
 # The next line enables zsh completion for gcloud.
 source /Users/d/google-cloud-sdk/completion.zsh.inc;
 export PATH=$PATH:$HOME/google-cloud-sdk/platform/google_appengine;
