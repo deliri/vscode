@@ -38,7 +38,7 @@
   // this isn't really underline-thin but we hack it to be a thicker cursor
   "editor.cursorStyle": "line-thin",
   "editor.cursorBlinking": "blink",
-  "editor.fontFamily": "Operator Mono Lig",
+  "editor.fontFamily": "Rec Mono Duotone",
   "editor.renderWhitespace": "all",
   // exclude settings
   "files.exclude": {
@@ -64,13 +64,12 @@
   "go.editor.formatOnSave": true,
   "go.formatTool": "goreturns",
   "go.formatFlags": [],
-  "go.goroot": "/usr/local/go",
-  "go.gopath": "/Users/d/go",
+  // "go.goroot": "/usr/local/go",
+  // "go.gopath": "/Users/d/go",
   "go.inferGopath": false,
   "go.gocodeAutoBuild": false,
-  "window.zoomLevel": 0,
   "git.confirmSync": false,
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.colorTheme": "Noctis Bordo",
   "explorer.confirmDelete": false,
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
@@ -188,8 +187,24 @@
   },
   "explorer.confirmDragAndDrop": false,
   "editor.fontLigatures": true,
-  //   "font.style": "italic",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.openEditors.visible": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "tabnine.experimentalAutoImports": true,
+  "go.toolsManagement.autoUpdate": true,
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "window.zoomLevel": -3,
+  "[json]": {
+
+
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": [
+      "document"
+    ]
+  }
 }
