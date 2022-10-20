@@ -5,6 +5,7 @@
 	editor = code
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
+	push.autosetupremote=true
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.gmail.com
@@ -20,6 +21,7 @@
 	autoupdate = 1
 [push]
 	default = matching
+	autoSetupRemote = true
 [color]
 	ui = auto
 [color "branch"]
@@ -231,3 +233,4 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
+	
