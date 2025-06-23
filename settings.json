@@ -1,46 +1,146 @@
 {
-  // Telemetry settings
-  "telemetry.enableCrashReporter": false,
-  "bracketPairColorizer.forceIterationColorCycle": true,
-  "telemetry.enableTelemetry": false,
-  "editor.minimap.enabled": true,
-  "editor.renderIndentGuides": false,
-  // Editor settings
-  "editor.formatOnType": true,
-  "editor.mouseWheelZoom": false,
+  // ==============================
+  // 🖼️ UI & Theme
+  // ==============================
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 1.2,
+  "workbench.colorTheme": "Catppuccin Noctis Macchiato",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorCustomizations": {
+    "editor.background": "#1E1E2E"
+  },
+
+  // ==============================
+  // 🎨 Font & Editor Visuals
+  // ==============================
+  "editor.fontFamily": "GeistMono Nerd Font Propo",
+  "editor.fontSize": 18,
+  "editor.fontWeight": "200",
+  "editor.lineHeight": 1.5,
+  "editor.letterSpacing": 0.5,
+  "editor.fontLigatures": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderLineHighlight": "gutter",
   "editor.rulers": [80, 100, 120],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.showSlider": "always",
+  "editor.stickyScroll.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+  "editor.largeFileOptimizations": false,
+  "editor.mouseWheelZoom": false,
+  "editor.unusedCode.opacity": 0.6,
+  "editor.showUnused": true,
+  "editor.tabSize": 8,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.indentation": true,
+
+  // ==============================
+  // 🧭 Editor Behavior
+  // ==============================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+
+  // ==============================
+  // 🛠️ Formatting & Code Quality
+  // ==============================
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+
+  // ==============================
+  // 🧩 Language Specific Settings
+  // ==============================
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+    "editor.tabSize": 8,
+    "editor.snippetSuggestions": "none",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 8
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+
+  // ==============================
+  // 🟦 Go Tools & Linting
+  // ==============================
+  "go.formatTool": "gofumpt",
+  "go.vetOnSave": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.useLanguageServer": true,
+  "gopls": {
+    "usePlaceholders": true
+  },
+  "go.toolsManagement.autoUpdate": true,
+
+  // ==============================
+  // 🌈 Rainbow Indent (Extension)
+  // ==============================
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  "indentRainbow.colors": [
+    "rgba(255, 105, 97, 0.7)",
+    "rgba(255, 179, 71, 0.7)",
+    "rgba(255, 255, 77, 0.7)",
+    "rgba(106, 255, 77, 0.7)",
+    "rgba(77, 255, 255, 0.7)",
+    "rgba(77, 179, 255, 0.7)",
+    "rgba(179, 77, 255, 0.7)",
+    "rgba(255, 77, 255, 0.7)",
+    "rgba(255, 77, 179, 0.7)",
+    "rgba(179, 255, 77, 0.7)"
+  ],
+
+  // ==============================
+  // ⚡️ Extensions & Misc
+  // ==============================
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  // show snippets before any other auto completion
-  "editor.snippetSuggestions": "top",
-  // this lets you quickly open multiple items in a row and not have the previous ones closed on you
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "sublimeTextKeymap.promptV3Features": true,
-  // These are all my auto-save configs
-  "editor.formatOnSave": true,
-  // turn it off for JS
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "editor.minimap.showSlider": "always",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.activityBar.visible": true,
-  "workbench.sideBar.location": "left",
-  "editor.fontSize": 24,
-  "editor.letterSpacing": 0.5,
-  "files.trimTrailingWhitespace": true,
-  "editor.fontWeight": "200",
-  "prettier.eslintIntegration": true,
-  // this isn't really underline-thin but we hack it to be a thicker cursor
-  "editor.cursorStyle": "line-thin",
-  "editor.cursorBlinking": "blink",
-  "editor.fontFamily": "Rec Mono Duotone",
-  "editor.renderWhitespace": "all",
-  // exclude settings
+
+  // ==============================
+  // 🚫 Telemetry & Privacy
+  // ==============================
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+
+  // ==============================
+  // 🧹 File/Folder Exclude
+  // ==============================
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
@@ -49,162 +149,5 @@
     "**/tags": true,
     "**/public/dist": true,
     "**/.vscode": true
-  },
-  // golang settings
-  "go.buildOnSave": false,
-  "go.lintOnSave": false,
-  "go.vetOnSave": true,
-  "go.buildTags": "",
-  "go.buildFlags": [],
-  "go.lintTool": "golint",
-  "go.lintFlags": [],
-  "go.vetFlags": [],
-  "go.coverOnSave": false,
-  "go.useCodeSnippetsOnFunctionSuggest": true,
-  "go.editor.formatOnSave": true,
-  "go.formatTool": "goreturns",
-  "go.formatFlags": [],
-  // "go.goroot": "/usr/local/go",
-  // "go.gopath": "/Users/d/go",
-  "go.inferGopath": false,
-  "go.gocodeAutoBuild": false,
-  "git.confirmSync": false,
-  "workbench.colorTheme": "Noctis Bordo",
-  "explorer.confirmDelete": false,
-  "go.useLanguageServer": true,
-  "go.languageServerExperimentalFeatures": {
-    "diagnostics": true // for diagnostics as you type
-  },
-  "[go]": {
-    "editor.snippetSuggestions": "none",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  },
-  "gopls": {
-    "usePlaceholders": true // add parameter placeholders when completing a function
-  },
-  "files.eol": "\n", // formatting only supports LF line endings
-  //"removeComments": true,
-  "minify.minifyExistingOnSave": false,
-  "minify.js": {
-    "mangle": true,
-    "compress": {
-      "sequences": true,
-      "properties": true,
-      "dead_code": true,
-      "drop_debugger": true,
-      "unsafe": false,
-      "unsafe_comps": false,
-      "conditionals": true,
-      "comparisons": true,
-      "evaluate": true,
-      "booleans": true,
-      "loops": true,
-      "unused": true,
-      "hoist_funs": true,
-      "keep_fargs": true,
-      "keep_fnames": false,
-      "hoist_vars": false,
-      "if_return": true,
-      "join_vars": true,
-      "collapse_vars": false,
-      "reduce_vars": false,
-      "cascade": true,
-      "side_effects": true,
-      "pure_getters": false,
-      "pure_funcs": null,
-      "negate_iife": false,
-      "drop_console": false,
-      "passes": 1,
-      "global_defs": {}
-    },
-    "output": {
-      "ascii_only": false,
-      "inline_script": false,
-      "max_line_len": 100000,
-      "bracketize": false,
-      "semicolons": true,
-      "comments": false,
-      "shebang": true,
-      "preamble": null,
-      "quote_style": "best"
-    }
-  },
-  "minify.css": {
-    "advanced": true,
-    "aggressiveMerging": true,
-    "compatibility": "*",
-    "inliner": {},
-    "keepBreaks": false,
-    "keepSpecialComments": "*",
-    "mediaMerging": true,
-    "processImport": true,
-    "processImportFrom": ["all"],
-    "rebase": true,
-    "restructuring": true,
-    "root": "${workspaceRoot}",
-    "roundingPrecision": 2,
-    "semanticMerging": false,
-    "shorthandCompacting": true
-  },
-  "minify.html": {
-    "caseSensitive": false,
-    "collapseBooleanAttributes": true,
-    "collapseWhitespace": true,
-    "conservativeCollapse": false,
-    "customAttrAssign": [],
-    "customAttrCollapse": "",
-    "customAttrSurround": [],
-    "customEventAttributes": ["^on[a-z]{3,}$"],
-    "decodeEntities": false,
-    "html5": true,
-    "ignoreCustomComments": ["^!"],
-    "ignoreCustomFragments": ["<%[\\s\\S]*?%>", "<\\?[\\s\\S]*?\\?>"],
-    "includeAutoGeneratedTags": true,
-    "keepClosingSlash": true,
-    "maxLineLength": false,
-    "minifyCSS": true, //uses minify.css settings if true
-    "minifyJS": true, //uses minify.js settings if true
-    "minifyURLs": true,
-    "preserveLineBreaks": false,
-    "preventAttributesEscaping": false,
-    "processConditionalComments": false,
-    "processScripts": [],
-    "quoteCharacter": "\"",
-    "removeAttributeQuotes": false,
-    "removeComments": true,
-    "removeEmptyAttributes": false,
-    "removeEmptyElements": false,
-    "removeOptionalTags": false,
-    "removeRedundantAttributes": false,
-    "removeScriptTypeAttributes": false,
-    "removeStyleLinkTypeAttributes": false,
-    "sortAttributes": false,
-    "sortClassName": false,
-    "useShortDoctype": true
-  },
-  "explorer.confirmDragAndDrop": false,
-  "editor.fontLigatures": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "explorer.openEditors.visible": 0,
-  "workbench.iconTheme": "material-icon-theme",
-  "tabnine.experimentalAutoImports": true,
-  "go.toolsManagement.autoUpdate": true,
-  "files.maxMemoryForLargeFilesMB": 8192,
-  "window.zoomLevel": -3,
-  "[json]": {
-
-
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace",
-    "gitlens.codeLens.scopes": [
-      "document"
-    ]
   }
 }
