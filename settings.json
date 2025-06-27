@@ -14,7 +14,6 @@
   "workbench.colorCustomizations": {
     "editor.background": "#1E1E2E"
   },
-
   // ==============================
   // 🎨 Font & Editor Visuals
   // ==============================
@@ -28,64 +27,72 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.renderLineHighlight": "gutter",
-  "editor.rulers": [80, 100, 120],
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 120,
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "editor.wordWrap": "off",
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 80,
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": false,
   "editor.renderWhitespace": "none",
-  "editor.suggestSelection": "first",
-  "editor.snippetSuggestions": "top",
-  "editor.largeFileOptimizations": false,
-  "editor.mouseWheelZoom": false,
-  "editor.unusedCode.opacity": 0.6,
   "editor.showUnused": true,
-  "editor.tabSize": 8,
+  "editor.unusedCode.opacity": 0.6,
+  "editor.tabSize": 4,
   "editor.guides.bracketPairs": "active",
   "editor.guides.indentation": true,
-
   // ==============================
   // 🧭 Editor Behavior
   // ==============================
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "none",
+  "editor.suggest.insertMode": "replace",
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.inlineSuggest.enabled": false,
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.largeFileOptimizations": false,
+  "editor.mouseWheelZoom": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 1,
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
-
-  // ==============================
-  // 🛠️ Formatting & Code Quality
-  // ==============================
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-
   // ==============================
   // 🧩 Language Specific Settings
   // ==============================
   "[go]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
-    "editor.tabSize": 8,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "off",
     "editor.snippetSuggestions": "none",
+    "editor.suggest.insertMode": "replace",
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggest.preview": false,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
   },
   "[javascript]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 8
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
   },
   "[html]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "[css]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "[json]": {
@@ -94,19 +101,19 @@
     },
     "editor.suggest.insertMode": "replace"
   },
-
   // ==============================
   // 🟦 Go Tools & Linting
   // ==============================
-  "go.formatTool": "gofumpt",
-  "go.vetOnSave": true,
-  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.formatTool": "gofmt",
+  "go.vetOnSave": "package",
   "go.useLanguageServer": true,
-  "gopls": {
-    "usePlaceholders": true
-  },
+  "go.useCodeSnippetsOnFunctionSuggest": false,
   "go.toolsManagement.autoUpdate": true,
-
+  "gopls": {
+    "usePlaceholders": true,
+    "formatting.local": "",
+    "formatting.gofumpt": false
+  },
   // ==============================
   // 🌈 Rainbow Indent (Extension)
   // ==============================
@@ -124,20 +131,17 @@
     "rgba(255, 77, 179, 0.7)",
     "rgba(179, 255, 77, 0.7)"
   ],
-
   // ==============================
   // ⚡️ Extensions & Misc
   // ==============================
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-
   // ==============================
   // 🚫 Telemetry & Privacy
   // ==============================
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-
   // ==============================
   // 🧹 File/Folder Exclude
   // ==============================
@@ -149,5 +153,10 @@
     "**/tags": true,
     "**/public/dist": true,
     "**/.vscode": true
-  }
+  },
+  "security.workspace.trust.banner": "never",
+  "workbench.settings.applyToAllProfiles": [
+
+  ],
+  "security.workspace.trust.untrustedFiles": "open"
 }
